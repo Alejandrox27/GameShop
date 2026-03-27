@@ -27,6 +27,10 @@ public class Videogame {
         this.engine = engine;
     }
 
+    public String getGenre () {
+            return genre;
+    }
+
     @Override
     public String toString() {
         return "------------------------------------------\n" +
