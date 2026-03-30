@@ -28,5 +28,11 @@ public class Main {
         // Find the enterprise with more videogames in the database using streams()
         String enterprise = service.EnterpriceMadeMoreVideogames();
         System.out.println(enterprise);
+
+        List<Videogame> videogamesFilteredByEnterprise = service.filterEnterpriseVideogames("Capcom Vancouver");
+        System.out.println(videogamesFilteredByEnterprise);
+
+        List<Videogame> videogamesFilteredAfterAYear = service.filterGamesAfterYearOfPublication(2023);
+        System.out.println(videogamesFilteredAfterAYear);
     }
 }

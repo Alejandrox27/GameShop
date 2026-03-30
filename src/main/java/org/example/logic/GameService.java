@@ -2,9 +2,9 @@ package org.example.logic;
 
 import org.example.db.videogameDAO;
 import org.example.models.Videogame;
+
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 public class GameService implements IGameService{
     final videogameDAO repo = new videogameDAO();
@@ -21,8 +21,7 @@ public class GameService implements IGameService{
 
     @Override
     public List<Videogame> showAllVideogames () {
-        return internalList.stream()
-                .collect(Collectors.toList());
+        return new ArrayList<>(internalList);
     }
 
     @Override
@@ -61,5 +60,15 @@ public class GameService implements IGameService{
                 .max(Map.Entry.comparingByValue())
                 .map(best -> best.getKey() + " with " + best.getValue() + " games")
                 .orElse("No data");*/
+    }
+
+    @Override
+    public List<Videogame> filterEnterpriseVideogames(String enterprise) {
+        return repo.searchEnterpriseVideogames(enterprise);
+    }
+
+    @Override
+    public List<Videogame> filterGamesAfterYearOfPublication(int year) {
+        return repo.searchGamesAfterYear(year);
     }
 }

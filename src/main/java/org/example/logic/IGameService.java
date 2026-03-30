@@ -9,4 +9,6 @@ public interface IGameService {
     List<Videogame> filterByGenre(String genre);
     Videogame searchGame(String title);
     String EnterpriceMadeMoreVideogames();
+    List<Videogame> filterEnterpriseVideogames(String enterprise);
+    List<Videogame> filterGamesAfterYearOfPublication(int year);
 }
