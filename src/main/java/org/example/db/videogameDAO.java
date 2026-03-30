@@ -1,7 +1,6 @@
 package org.example.db;
 import org.example.models.Videogame;
 
-import java.net.ConnectException;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;

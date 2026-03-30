@@ -1,11 +1,7 @@
 package org.example;
-import org.example.db.videogameDAO;
 import org.example.models.Videogame;
 import org.example.logic.GameService;
 import org.example.logic.IGameService;
-import java.util.List;
-import java.util.ArrayList;
-
 import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -14,16 +10,16 @@ public class Main {
     static void main() {
         IGameService service = new GameService();
 
-        /*List<Videogame> videogames = service.showAllVideogames();
-        System.out.println(videogames);*/
+        List<Videogame> videogames = service.showAllVideogames();
+        System.out.println(videogames);
 
         // FILTER GAMES BY GENRE (WITH SQL OR STREAMS)
         List<Videogame> videogamesFilteredByGenre = service.filterByGenre("platforms");
         System.out.println(videogamesFilteredByGenre);
 
         // FIND VIDEOGAME USING SQL
-        /*Videogame videogameFound = service.searchGame("grand theft auto vI");
-        System.out.println(videogameFound);*/
+        Videogame videogameFound = service.searchGame("grand theft auto vI");
+        System.out.println(videogameFound);
 
         // Find the enterprise with more videogames in the database using streams()
         String enterprise = service.EnterpriceMadeMoreVideogames();
