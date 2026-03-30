@@ -17,12 +17,16 @@ public class Main {
         /*List<Videogame> videogames = service.showAllVideogames();
         System.out.println(videogames);*/
 
-        // FILTER VIDEOGAMES BY GENRE USING FUNCTIONAL PROGRAMMING (STREAMS)
-        /*List<Videogame> videogamesFilteredByGenre = service.filterByGenre("platforms");
-        System.out.println(videogamesFilteredByGenre);*/
+        // FILTER GAMES BY GENRE (WITH SQL OR STREAMS)
+        List<Videogame> videogamesFilteredByGenre = service.filterByGenre("platforms");
+        System.out.println(videogamesFilteredByGenre);
 
         // FIND VIDEOGAME USING SQL
         /*Videogame videogameFound = service.searchGame("grand theft auto vI");
         System.out.println(videogameFound);*/
+
+        // Find the enterprise with more videogames in the database using streams()
+        String enterprise = service.EnterpriceMadeMoreVideogames();
+        System.out.println(enterprise);
     }
 }

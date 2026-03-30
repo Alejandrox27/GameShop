@@ -13,15 +13,15 @@ public class Videogame {
     private String genre;
     private String clasification_ESRB;
     private String engine;
-    private String empresa;
+    private String enterprise;
 
-        public Videogame (int id, String title, LocalDate publicationDate, String director, String empresa, String genre,
+        public Videogame (int id, String title, LocalDate publicationDate, String director, String enterprise, String genre,
                           String clasification_ESRB, String engine) {
         this.id = id;
         this.title = title;
         this.publicationDate = publicationDate;
         this.director = director;
-        this.empresa = empresa;
+        this.enterprise = enterprise;
         this.genre = genre;
         this.clasification_ESRB = clasification_ESRB;
         this.engine = engine;
@@ -29,6 +29,10 @@ public class Videogame {
 
     public String getGenre () {
             return genre;
+    }
+
+    public String getEnterprise () {
+        return enterprise;
     }
 
     @Override
@@ -39,7 +43,7 @@ public class Videogame {
                 "Title:       " + title + "\n" +
                 "Date:        " + publicationDate + "\n" +
                 "Director:     " + director + "\n" +
-                "Enterprise: " + empresa + "\n" +
+                "Enterprise: " + enterprise + "\n" +
                 "Genre:       " + genre + "\n" +
                 "ESRB:         " + clasification_ESRB + "\n" +
                 "Engine: " + engine + "\n" +

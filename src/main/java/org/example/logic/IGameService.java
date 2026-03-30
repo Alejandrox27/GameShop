@@ -8,4 +8,5 @@ public interface IGameService {
     List<Videogame> showAllVideogames();
     List<Videogame> filterByGenre(String genre);
     Videogame searchGame(String title);
+    String EnterpriceMadeMoreVideogames();
 }
